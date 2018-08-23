@@ -1,0 +1,27 @@
+{
+  "name": "TechnicalTask",
+  "version": "1.0.0",
+  "description": "Technical Task from https://www.goodreads.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 120000 --ui bdd --full-trace ./e2e -R good-mocha-html-reporter -p ./report/report_chrome.html --exit",
+    "preinstall-chromedriver": "npm install",
+    "install-chromedriver": "node node_modules/chromedriver/install.js",
+    "pretest_e2e": "npm run install-chromedriver",
+    "postinstall": "cd node_modules/gulp-mocha/node_modules/ && npm install xunit-file"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^3.6.0",
+    "chromedriver": "^2.41.0",
+    "chai": "^4.1.2",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "gulp-grep": "^0.2.0",
+    "mocha": "~4.0.1",
+    "good-mocha-html-reporter": "^2.0.1",
+    "yargs": "^12.0.1"
+  },
+  "keywords": [],
+  "author": "Aleksandr Turenko",
+  "license": "ISC"
+}
